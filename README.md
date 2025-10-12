@@ -7,7 +7,7 @@ This project works entirely offline (no server or database required).
 
 ##  Features
 
-** Interactive Invoice Creation  **
+### Interactive Invoice Creation  
 Fill out company, client, and item details directly in the interface.  
 
 ✓ Live Editing  
