@@ -37,7 +37,7 @@ Print invoices directly from your browser with a single click.
 | html2canvas | Capture the invoice for PDF export |
 | jsPDF | Generate and download PDF files |
 
----
+
 
 ##  Project Structure
 
