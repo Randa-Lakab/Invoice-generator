@@ -46,7 +46,7 @@ Invoice generator/ │ ├── index.html        # Main page (form + preview)
 ├── app.js            # Main JavaScript logic 
 └── README.md         # Project documentation
 
----
+
 
 ##  How to Use
 
