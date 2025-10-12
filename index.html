@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Générateur de factures — Démo</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Bibliothèques pour export PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Générateur de factures — Démo</h1>
+      <div class="controls">
+        <button id="saveBtn">Enregistrer (local)</button>
+        <button id="downloadJsonBtn" class="secondary">Télécharger JSON</button>
+        <button id="pdfBtn">Exporter PDF</button>
+        <button id="printBtn" class="secondary">Imprimer</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- Left: Form / Controls -->
+      <div class="panel">
+        <form id="invoiceForm" onsubmit="return false;">
+          <div class="row">
+            <div class="col">
+              <label>Nom de la société</label>
+              <input id="companyName" type="text" value="Ma Société SARL" />
+            </div>
+            <div class="col">
+              <label>Devise (symbole)</label>
+              <input id="currencySymbol" type="text" value="DA" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label>Adresse société</label>
+              <input id="companyAddress" type="text" value="Adresse, Ville, Pays" />
+            </div>
+            <div class="col">
+              <label>Email</label>
+              <input id="companyEmail" type="text" value="contact@monsociete.com" />
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row">
+            <div class="col">
+              <label>Client</label>
+              <input id="clientName" type="text" value="Client Exemple" />
+            </div>
+            <div class="col">
+              <label>Client Email</label>
+              <input id="clientEmail" type="text" value="client@exemple.com" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label>Numéro facture</label>
+              <input id="invoiceNumber" type="text" value="INV-0001" />
+            </div>
+            <div class="col">
+              <label>Date</label>
+              <input id="invoiceDate" type="date" value="" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label>Message / Note (optionnel)</label>
+              <input id="note" type="text" placeholder="Merci pour votre confiance" />
+            </div>
+            <div class="col">
+              <label>Taux de TVA (%) global (optionnel)</label>
+              <input id="globalTax" type="number" value="0" />
+            </div>
+          </div>
+
+          <div class="small">Astuce: modifie directement les champs sur la prévisualisation à droite. Chaque ligne de produits a un champ 'Tax' individuel.</div>
+        </form>
+      </div>
+
+      <!-- Right: Invoice preview (cible export) -->
+      <div class="panel invoice-preview" id="invoice-preview">
+        <div class="inv-header">
+          <div class="company">
+            <strong contenteditable id="previewCompanyName">Ma Société SARL</strong>
+            <div class="small" id="previewCompanyAddress">Adresse, Ville, Pays</div>
+            <div class="small" id="previewCompanyEmail">contact@monsociete.com</div>
+          </div>
+          <div class="invoice-meta">
+            <div><strong>FACTURE</strong></div>
+            <div class="small">N°: <input id="previewInvoiceNumber" type="text" value="INV-0001" style="width:110px"/></div>
+            <div class="small">Date: <input id="previewInvoiceDate" type="date"/></div>
+            <div class="small">Due: <input id="previewDueDate" type="date"/></div>
+          </div>
+        </div>
+
+
+        <div style="margin-top:12px; display:flex; justify-content:space-between; gap:12px">
+          <div>
+            <div class="small">Facturer à:</div>
+            <div><input id="previewClientName" type="text" value="Client Exemple"/></div>
+            <div class="small"><input id="previewClientEmail" type="text" value="client@exemple.com"/></div>
+          </div>
+          <div style="text-align:right">
+            <div class="small">Symbole devise</div>
+            <div><input id="previewCurrencySymbol" type="text" value="DA" style="width:60px;text-align:center"/></div>
+          </div>
+        </div>
+
+        <table class="items" id="itemsTable">
+          <thead>
+            <tr>
+              <th style="width:40%">Description</th>
+              <th style="width:12%">Quantité</th>
+              <th style="width:16%">Prix unitaire</th>
+              <th style="width:12%">Tax (%)</th>
+              <th style="width:16%">Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="itemsBody"></tbody>
+        </table>
+
+        <button id="addItemBtn" class="add-item">+ Ajouter un article</button>
+
+        <div class="summary">
+          <div class="left small">Note: <span id="previewNote">Merci pour votre confiance</span></div>
+          <div class="totals">
+            <div>Subtotal: <strong id="subtotalPreview">0</strong></div>
+            <div>TVA totale: <strong id="taxTotalPreview">0</strong></div>
+            <div style="font-size:18px; margin-top:8px">Total: <strong id="grandTotalPreview">0</strong></div>
+          </div>
+        </div>
+
+        <footer>
+          <div class="small">Conditions: Paiement sous 30 jours. Merci de votre confiance.</div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- App JS -->
+  <script src="app.js" defer></script>
+</body>
+</html>
