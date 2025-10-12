@@ -45,3 +45,12 @@ Invoice generator/ │ ├── index.html        # Main page (form + preview)
 ├── styles.css        # Application styles 
 ├── app.js            # Main JavaScript logic 
 └── README.md         # Project documentation
+
+---
+
+##  How to Use
+
+1. Clone or download the repository:
+   ```bash
+   git clone https://github.com/YourUsername/Invoice-generator.git
+   ```
