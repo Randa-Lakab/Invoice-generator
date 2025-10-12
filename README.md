@@ -59,6 +59,7 @@ Invoice generator/ │ ├── index.html        # Main page (form + preview)
 
 3. Fill in company and client details, add items, then:
 💾 Save locally
+
 📄 Export as PDF
 🧾 Download as JSON
 🖨️ Print the invoice
