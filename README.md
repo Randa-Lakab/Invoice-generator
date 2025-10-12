@@ -54,3 +54,11 @@ Invoice generator/ │ ├── index.html        # Main page (form + preview)
    ```bash
    git clone https://github.com/YourUsername/Invoice-generator.git
    ```
+2. Open the index.html file in your browser.
+(No installation required)
+
+3. Fill in company and client details, add items, then:
+💾 Save locally
+📄 Export as PDF
+🧾 Download as JSON
+🖨️ Print the invoice
