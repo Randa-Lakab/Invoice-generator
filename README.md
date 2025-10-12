@@ -64,4 +64,5 @@ Invoice generator/ │ ├── index.html        # Main page (form + preview)
 • Export as PDF
 
 • Download as JSON
-🖨️ Print the invoice
+
+• Print the invoice
