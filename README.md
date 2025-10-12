@@ -66,3 +66,8 @@ Invoice generator/ │ ├── index.html        # Main page (form + preview)
 • Download as JSON
 
 • Print the invoice
+
+## 🧩 External Libraries
+
+- [html2canvas v1.4.1](https://cdnjs.com/libraries/html2canvas)  
+- [jsPDF v2.5.1](https://cdnjs.com/libraries/jspdf)
