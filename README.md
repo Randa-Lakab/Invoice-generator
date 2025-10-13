@@ -9,7 +9,6 @@ This project works entirely offline (no server or database required).
 
 ### Interactive Invoice Creation  
 Fill out company, client, and item details directly in the interface.  
-
 ### Live Editing  
 Preview fields (name, address, prices, quantities, etc.) are editable directly on the invoice using contenteditable.  
 
