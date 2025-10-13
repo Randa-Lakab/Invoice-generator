@@ -11,7 +11,6 @@ This project works entirely offline (no server or database required).
 Fill out company, client, and item details directly in the interface.  
 ### Live Editing  
 Preview fields (name, address, prices, quantities, etc.) are editable directly on the invoice using contenteditable.  
-
 ### Local Save  
 Store invoice data in the browser’s LocalStorage, so it persists even after refreshing the page.  
 
