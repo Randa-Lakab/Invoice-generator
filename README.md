@@ -41,7 +41,7 @@ Invoice generator/ │ ├── index.html        # Main page (form + preview)
 
 
 
-##  How to Use
+###  How to Use
 
 1. Clone or download the repository:
    ```bash
