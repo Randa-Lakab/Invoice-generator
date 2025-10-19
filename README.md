@@ -20,7 +20,7 @@ Download your invoice data as a JSON file for reuse or backup.
 ### Print Support  
 Print invoices directly from your browser with a single click.  
 
-##  Technologies Used
+###  Technologies Used
 
 | Technology | Purpose |
 |-------------|----------|
