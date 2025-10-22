@@ -34,8 +34,7 @@ Print invoices directly from your browser with a single click.
 
 ###  Project Structure
 
-Invoice generator/ │ ├── index.html        # Main page (form + preview) 
-├─       
+Invoice generator/ │ ├── index.html        # Main page (form + preview)      
 
 
 
