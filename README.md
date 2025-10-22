@@ -28,7 +28,7 @@ Print invoices directly from your browser with a single click.
 | CSS3 | Layout and responsive design |
 | JavaScript (ES6) | Dynamic logic and user interactions |
 | html2canvas | Capture the invoice for PDF export |
-| jsPDF | Generate and download PDF files |
+| jsPDF | Generate and download 
 
 
 
