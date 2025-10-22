@@ -37,7 +37,7 @@ Print invoices directly from your browser with a single click.
 Invoice generator/ │ ├── index.html        # Main page (form + preview) 
 ├── styles.css        # Application styles 
 ├── app.js            # Main JavaScript logic 
-└── README.md         # Project documentation
+└── README.md         # Project
 
 
 
