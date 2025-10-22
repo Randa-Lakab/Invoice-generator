@@ -34,9 +34,6 @@ Print invoices directly from your browser with a single click.
 
 ###  Project Structure
          
-
-
-
 ###  How to Use
 
 1. Clone or download the repository:
