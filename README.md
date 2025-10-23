@@ -49,7 +49,6 @@ Print invoices directly from your browser with a single click.
 
 • Print the invoice
 
-#
 
 ###  External Libraries
 
