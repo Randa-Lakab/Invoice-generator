@@ -4,7 +4,6 @@ A simple and intuitive web application built with HTML, CSS, and JavaScript that
 This project works entirely offline (no server or database required).
 
 
-
 ###  Features
 
 ### Interactive Invoice Creation  
