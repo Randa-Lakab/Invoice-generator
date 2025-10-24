@@ -14,7 +14,7 @@ Store invoice data in the browser’s LocalStorage, so it persists even after re
 Generate and download professional invoices as PDF files using html2canvas and jsPDF.  
 ### • JSON Export  
 Download your invoice data as a JSON file for reuse or backup.  
-### Print Support  
+### • Print Support  
 Print invoices directly from your browser with a single click.  
 
 ###  Technologies Used
