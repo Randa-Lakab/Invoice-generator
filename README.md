@@ -10,7 +10,7 @@ Fill out company, client, and item details directly in the interface.
 Preview fields (name, address, prices, quantities, etc.) are editable directly on the invoice using contenteditable.  
 ### • Local Save  
 Store invoice data in the browser’s LocalStorage, so it persists even after refreshing the page.  
-### PDF Export  
+### • PDF Export  
 Generate and download professional invoices as PDF files using html2canvas and jsPDF.  
 ### JSON Export  
 Download your invoice data as a JSON file for reuse or backup.  
