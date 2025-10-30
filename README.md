@@ -3,7 +3,7 @@
 A simple and intuitive web application built with HTML, CSS, and JavaScript that allows users to create, preview, and export invoices easily.  
 This project works entirely offline (no server or database required).
 
-###  Feature
+###  Features
 ### • Interactive Invoice Creation  
 Fill out company, client, and item details directly in the interface.  
 ### • Live Editing  
